@@ -76,11 +76,11 @@ st.markdown("""
 # ==========================================
 # 2. Sidebar Navigation & Controls
 # ==========================================
-st.sidebar.markdown("<h2 style='text-align: center; color: white;'>📱 Menu</h2>", unsafe_allow_html=True)
-page = st.sidebar.radio("", ["Live Dashboard 🚀", "Architecture 🧠"])
+st.sidebar.markdown("<h2 style='text-align: center; color: #38bdf8; font-weight: 900;'>MENU</h2>", unsafe_allow_html=True)
+page = st.sidebar.radio("", ["Live Dashboard", "Architecture"])
 st.sidebar.markdown("---")
 
-st.sidebar.markdown("<h3 style='text-align: center; color: white; margin-bottom: 10px; font-family: Consolas;'>ENVIRONMENT ⚙️</h3>", unsafe_allow_html=True)
+st.sidebar.markdown("<h3 style='text-align: center; color: white; margin-bottom: 10px; font-family: Consolas;'>ENVIRONMENT</h3>", unsafe_allow_html=True)
 snr = st.sidebar.slider("Signal Strength (SNR dB)", min_value=0, max_value=30, value=20, step=2)
 speed = st.sidebar.slider("Doppler Shift (Speed km/h)", min_value=0, max_value=400, value=50, step=10)
 ds = st.sidebar.slider("Delay Spread (Obstacles ns)", min_value=50, max_value=300, value=100, step=10)
