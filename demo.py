@@ -22,12 +22,6 @@ st.markdown("""
     }
     .sub-title { text-align: center; color: #94a3b8; font-family: 'Consolas', monospace; font-size: 1rem; margin-bottom: 5px; letter-spacing: 1px; }
     
-    .live-dot {
-        height: 12px; width: 12px; background-color: #ef4444; border-radius: 50%;
-        display: inline-block; margin-right: 8px; animation: blink 1s infinite;
-    }
-    @keyframes blink { 0% {opacity: 1;} 50% {opacity: 0.3;} 100% {opacity: 1;} }
-    
     .panel {
         background: #0f172a; border: 1px solid #1e293b;
         border-radius: 4px; padding: 10px; margin-bottom: 10px;
@@ -147,11 +141,11 @@ ai_speed_trace = np.clip(ai_speed + np.random.normal(0, 10, 60), 0, MAX_SPEED)
 # ==========================================
 # PAGE 1: LIVE DASHBOARD
 # ==========================================
-if page == "Live Dashboard 🚀":
+if page == "Live Dashboard":
     with st.spinner("Syncing Node..."):
         time.sleep(0.05)
         
-    st.markdown('<h1 class="main-title"><span class="live-dot"></span>NOC TELEMETRY: 5G NODE 01</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-title">NOC TELEMETRY: 5G NODE 01</h1>', unsafe_allow_html=True)
     st.markdown('<p class="sub-title">AI ENGINE: FORTITRANM-FILM | FALLBACK: LMMSE</p>', unsafe_allow_html=True)
 
     c1, c2, c3, c4 = st.columns(4)
@@ -205,7 +199,7 @@ if page == "Live Dashboard 🚀":
 # ==========================================
 # PAGE 2: ANIMATED ARCHITECTURE
 # ==========================================
-elif page == "Architecture 🧠":
+elif page == "Architecture":
     st.markdown('<h1 class="main-title">FortiTranM-FiLM Pipeline</h1>', unsafe_allow_html=True)
     st.markdown('<p class="sub-title">How AI reconstructs the 5G signal (Technical vs Simple)</p>', unsafe_allow_html=True)
 
